@@ -1,0 +1,1007 @@
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses translations '
+                                                          'of the Massive '
+                                                          'Multitask Language '
+                                                          'Understanding '
+                                                          '(MMLU) English '
+                                                          'dataset, which '
+                                                          'consists of general '
+                                                          'knowledge '
+                                                          'multiple-choice '
+                                                          'questions to '
+                                                          'evaluate the '
+                                                          "model's ability to "
+                                                          'answer multilingual '
+                                                          'questions about '
+                                                          'elementary '
+                                                          'mathematics, US '
+                                                          'history, computer '
+                                                          'science, law, and '
+                                                          'more. Metric '
+                                                          'measures the '
+                                                          'accuracy of '
+                                                          'answers.',
+                                           'language': 'Portuguese',
+                                           'dataset': {'name': 'XMMLU'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'Accuracy',
+                                                        'value': 65.04}],
+                                           'tags': ['Knowledge']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses translations '
+                                                          'of the Massive '
+                                                          'Multitask Language '
+                                                          'Understanding '
+                                                          '(MMLU) English '
+                                                          'dataset, which '
+                                                          'consists of general '
+                                                          'knowledge '
+                                                          'multiple-choice '
+                                                          'questions to '
+                                                          'evaluate the '
+                                                          "model's ability to "
+                                                          'answer multilingual '
+                                                          'questions about '
+                                                          'elementary '
+                                                          'mathematics, US '
+                                                          'history, computer '
+                                                          'science, law, and '
+                                                          'more. Metric '
+                                                          'measures the '
+                                                          'accuracy of '
+                                                          'answers.',
+                                           'language': 'Spanish',
+                                           'dataset': {'name': 'XMMLU'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'Accuracy',
+                                                        'value': 63.47}],
+                                           'tags': ['Knowledge']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses translations '
+                                                          'of the Massive '
+                                                          'Multitask Language '
+                                                          'Understanding '
+                                                          '(MMLU) English '
+                                                          'dataset, which '
+                                                          'consists of general '
+                                                          'knowledge '
+                                                          'multiple-choice '
+                                                          'questions to '
+                                                          'evaluate the '
+                                                          "model's ability to "
+                                                          'answer multilingual '
+                                                          'questions about '
+                                                          'elementary '
+                                                          'mathematics, US '
+                                                          'history, computer '
+                                                          'science, law, and '
+                                                          'more. Prompts are '
+                                                          'in English. Metric '
+                                                          'measures the '
+                                                          'accuracy of '
+                                                          'answers.',
+                                           'language': 'Arabic',
+                                           'dataset': {'name': 'XMMLU_en'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'Accuracy',
+                                                        'value': 65.14}],
+                                           'tags': ['Knowledge']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses translations '
+                                                          'of the Massive '
+                                                          'Multitask Language '
+                                                          'Understanding '
+                                                          '(MMLU) English '
+                                                          'dataset, which '
+                                                          'consists of general '
+                                                          'knowledge '
+                                                          'multiple-choice '
+                                                          'questions to '
+                                                          'evaluate the '
+                                                          "model's ability to "
+                                                          'answer multilingual '
+                                                          'questions about '
+                                                          'elementary '
+                                                          'mathematics, US '
+                                                          'history, computer '
+                                                          'science, law, and '
+                                                          'more. Prompts are '
+                                                          'in English. Metric '
+                                                          'measures the '
+                                                          'accuracy of '
+                                                          'answers.',
+                                           'language': 'French',
+                                           'dataset': {'name': 'XMMLU_en'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'Accuracy',
+                                                        'value': 63.5}],
+                                           'tags': ['Knowledge']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses translations '
+                                                          'of the Massive '
+                                                          'Multitask Language '
+                                                          'Understanding '
+                                                          '(MMLU) English '
+                                                          'dataset, which '
+                                                          'consists of general '
+                                                          'knowledge '
+                                                          'multiple-choice '
+                                                          'questions to '
+                                                          'evaluate the '
+                                                          "model's ability to "
+                                                          'answer multilingual '
+                                                          'questions about '
+                                                          'elementary '
+                                                          'mathematics, US '
+                                                          'history, computer '
+                                                          'science, law, and '
+                                                          'more. Prompts are '
+                                                          'in English. Metric '
+                                                          'measures the '
+                                                          'accuracy of '
+                                                          'answers.',
+                                           'language': 'German',
+                                           'dataset': {'name': 'XMMLU_en'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'Accuracy',
+                                                        'value': 62.77}],
+                                           'tags': ['Knowledge']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses translations '
+                                                          'of the Massive '
+                                                          'Multitask Language '
+                                                          'Understanding '
+                                                          '(MMLU) English '
+                                                          'dataset, which '
+                                                          'consists of general '
+                                                          'knowledge '
+                                                          'multiple-choice '
+                                                          'questions to '
+                                                          'evaluate the '
+                                                          "model's ability to "
+                                                          'answer multilingual '
+                                                          'questions about '
+                                                          'elementary '
+                                                          'mathematics, US '
+                                                          'history, computer '
+                                                          'science, law, and '
+                                                          'more. Prompts are '
+                                                          'in English. Metric '
+                                                          'measures the '
+                                                          'accuracy of '
+                                                          'answers.',
+                                           'language': 'Japanese',
+                                           'dataset': {'name': 'XMMLU_en'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'Accuracy',
+                                                        'value': 58.2}],
+                                           'tags': ['Knowledge']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses translations '
+                                                          'of the Massive '
+                                                          'Multitask Language '
+                                                          'Understanding '
+                                                          '(MMLU) English '
+                                                          'dataset, which '
+                                                          'consists of general '
+                                                          'knowledge '
+                                                          'multiple-choice '
+                                                          'questions to '
+                                                          'evaluate the '
+                                                          "model's ability to "
+                                                          'answer multilingual '
+                                                          'questions about '
+                                                          'elementary '
+                                                          'mathematics, US '
+                                                          'history, computer '
+                                                          'science, law, and '
+                                                          'more. Prompts are '
+                                                          'in English. Metric '
+                                                          'measures the '
+                                                          'accuracy of '
+                                                          'answers.',
+                                           'language': 'Korean',
+                                           'dataset': {'name': 'XMMLU_en'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'Accuracy',
+                                                        'value': 68.71}],
+                                           'tags': ['Knowledge']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses translations '
+                                                          'of the Massive '
+                                                          'Multitask Language '
+                                                          'Understanding '
+                                                          '(MMLU) English '
+                                                          'dataset, which '
+                                                          'consists of general '
+                                                          'knowledge '
+                                                          'multiple-choice '
+                                                          'questions to '
+                                                          'evaluate the '
+                                                          "model's ability to "
+                                                          'answer multilingual '
+                                                          'questions about '
+                                                          'elementary '
+                                                          'mathematics, US '
+                                                          'history, computer '
+                                                          'science, law, and '
+                                                          'more. Prompts are '
+                                                          'in English. Metric '
+                                                          'measures the '
+                                                          'accuracy of '
+                                                          'answers.',
+                                           'language': 'Portuguese',
+                                           'dataset': {'name': 'XMMLU_en'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'Accuracy',
+                                                        'value': 63.75}],
+                                           'tags': ['Knowledge']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses translations '
+                                                          'of the Massive '
+                                                          'Multitask Language '
+                                                          'Understanding '
+                                                          '(MMLU) English '
+                                                          'dataset, which '
+                                                          'consists of general '
+                                                          'knowledge '
+                                                          'multiple-choice '
+                                                          'questions to '
+                                                          'evaluate the '
+                                                          "model's ability to "
+                                                          'answer multilingual '
+                                                          'questions about '
+                                                          'elementary '
+                                                          'mathematics, US '
+                                                          'history, computer '
+                                                          'science, law, and '
+                                                          'more. Prompts are '
+                                                          'in English. Metric '
+                                                          'measures the '
+                                                          'accuracy of '
+                                                          'answers.',
+                                           'language': 'Spanish',
+                                           'dataset': {'name': 'XMMLU_en'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'Accuracy',
+                                                        'value': 62.44}],
+                                           'tags': ['Knowledge']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses a subset of '
+                                                          'data from the MNLI '
+                                                          '(Multi-Genre '
+                                                          'Natural Language '
+                                                          'Inference) dataset, '
+                                                          'which has '
+                                                          'crowd-sourced '
+                                                          'sentence pairs that '
+                                                          'are annotated with '
+                                                          'textual entailment '
+                                                          'information, '
+                                                          'translated into 14 '
+                                                          'languages to '
+                                                          'evaluate how well a '
+                                                          'model can classify '
+                                                          'multilingual '
+                                                          'sentences. Metric '
+                                                          'measures the '
+                                                          'accuracy of '
+                                                          'answers.',
+                                           'language': 'Arabic',
+                                           'dataset': {'name': 'XNLI'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'Accuracy',
+                                                        'value': 64.84}],
+                                           'tags': ['Reasoning']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses a subset of '
+                                                          'data from the MNLI '
+                                                          '(Multi-Genre '
+                                                          'Natural Language '
+                                                          'Inference) dataset, '
+                                                          'which has '
+                                                          'crowd-sourced '
+                                                          'sentence pairs that '
+                                                          'are annotated with '
+                                                          'textual entailment '
+                                                          'information, '
+                                                          'translated into 14 '
+                                                          'languages to '
+                                                          'evaluate how well a '
+                                                          'model can classify '
+                                                          'multilingual '
+                                                          'sentences. Metric '
+                                                          'measures the '
+                                                          'accuracy of '
+                                                          'answers.',
+                                           'language': 'French',
+                                           'dataset': {'name': 'XNLI'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'Accuracy',
+                                                        'value': 70.31}],
+                                           'tags': ['Reasoning']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses a subset of '
+                                                          'data from the MNLI '
+                                                          '(Multi-Genre '
+                                                          'Natural Language '
+                                                          'Inference) dataset, '
+                                                          'which has '
+                                                          'crowd-sourced '
+                                                          'sentence pairs that '
+                                                          'are annotated with '
+                                                          'textual entailment '
+                                                          'information, '
+                                                          'translated into 14 '
+                                                          'languages to '
+                                                          'evaluate how well a '
+                                                          'model can classify '
+                                                          'multilingual '
+                                                          'sentences. Metric '
+                                                          'measures the '
+                                                          'accuracy of '
+                                                          'answers.',
+                                           'language': 'German',
+                                           'dataset': {'name': 'XNLI'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'Accuracy',
+                                                        'value': 74.22}],
+                                           'tags': ['Reasoning']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses a subset of '
+                                                          'data from the MNLI '
+                                                          '(Multi-Genre '
+                                                          'Natural Language '
+                                                          'Inference) dataset, '
+                                                          'which has '
+                                                          'crowd-sourced '
+                                                          'sentence pairs that '
+                                                          'are annotated with '
+                                                          'textual entailment '
+                                                          'information, '
+                                                          'translated into 14 '
+                                                          'languages to '
+                                                          'evaluate how well a '
+                                                          'model can classify '
+                                                          'multilingual '
+                                                          'sentences. Metric '
+                                                          'measures the '
+                                                          'accuracy of '
+                                                          'answers.',
+                                           'language': 'Spanish',
+                                           'dataset': {'name': 'XNLI'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'Accuracy',
+                                                        'value': 69.53}],
+                                           'tags': ['Reasoning']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses a subset of '
+                                                          'data from the MNLI '
+                                                          '(Multi-Genre '
+                                                          'Natural Language '
+                                                          'Inference dataset, '
+                                                          'which has '
+                                                          'crowd-sourced '
+                                                          'sentence pairs that '
+                                                          'are annotated with '
+                                                          'textual entailment '
+                                                          'information, '
+                                                          'translated into 14 '
+                                                          'languages to '
+                                                          'evaluate how well a '
+                                                          'model can classify '
+                                                          'multilingual '
+                                                          'sentences when the '
+                                                          'prompts are in '
+                                                          'English. Metric '
+                                                          'measures the '
+                                                          'accuracy of '
+                                                          'answers.',
+                                           'language': 'Arabic',
+                                           'dataset': {'name': 'XNLI_en'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'Accuracy',
+                                                        'value': 74.22}],
+                                           'tags': ['Reasoning']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses a subset of '
+                                                          'data from the MNLI '
+                                                          '(Multi-Genre '
+                                                          'Natural Language '
+                                                          'Inference dataset, '
+                                                          'which has '
+                                                          'crowd-sourced '
+                                                          'sentence pairs that '
+                                                          'are annotated with '
+                                                          'textual entailment '
+                                                          'information, '
+                                                          'translated into 14 '
+                                                          'languages to '
+                                                          'evaluate how well a '
+                                                          'model can classify '
+                                                          'multilingual '
+                                                          'sentences when the '
+                                                          'prompts are in '
+                                                          'English. Metric '
+                                                          'measures the '
+                                                          'accuracy of '
+                                                          'answers.',
+                                           'language': 'French',
+                                           'dataset': {'name': 'XNLI_en'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'Accuracy',
+                                                        'value': 72.66}],
+                                           'tags': ['Reasoning']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses a subset of '
+                                                          'data from the MNLI '
+                                                          '(Multi-Genre '
+                                                          'Natural Language '
+                                                          'Inference dataset, '
+                                                          'which has '
+                                                          'crowd-sourced '
+                                                          'sentence pairs that '
+                                                          'are annotated with '
+                                                          'textual entailment '
+                                                          'information, '
+                                                          'translated into 14 '
+                                                          'languages to '
+                                                          'evaluate how well a '
+                                                          'model can classify '
+                                                          'multilingual '
+                                                          'sentences when the '
+                                                          'prompts are in '
+                                                          'English. Metric '
+                                                          'measures the '
+                                                          'accuracy of '
+                                                          'answers.',
+                                           'language': 'German',
+                                           'dataset': {'name': 'XNLI_en'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'Accuracy',
+                                                        'value': 76.56}],
+                                           'tags': ['Reasoning']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses a subset of '
+                                                          'data from the MNLI '
+                                                          '(Multi-Genre '
+                                                          'Natural Language '
+                                                          'Inference dataset, '
+                                                          'which has '
+                                                          'crowd-sourced '
+                                                          'sentence pairs that '
+                                                          'are annotated with '
+                                                          'textual entailment '
+                                                          'information, '
+                                                          'translated into 14 '
+                                                          'languages to '
+                                                          'evaluate how well a '
+                                                          'model can classify '
+                                                          'multilingual '
+                                                          'sentences when the '
+                                                          'prompts are in '
+                                                          'English. Metric '
+                                                          'measures the '
+                                                          'accuracy of '
+                                                          'answers.',
+                                           'language': 'Spanish',
+                                           'dataset': {'name': 'XNLI_en'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'Accuracy',
+                                                        'value': 79.69}],
+                                           'tags': ['Reasoning']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses a multilingual '
+                                                          'collection of '
+                                                          'Winograd Schemas, '
+                                                          'which are pairs of '
+                                                          'sentences with '
+                                                          'different meanings '
+                                                          'due to slight word '
+                                                          'changes, to '
+                                                          "evaluate a model's "
+                                                          'ability to '
+                                                          'understand context '
+                                                          'and resolve '
+                                                          'ambiguity in '
+                                                          'multilingual text. '
+                                                          'Metric measures the '
+                                                          'accuracy of '
+                                                          'answers.',
+                                           'language': 'Portuguese',
+                                           'dataset': {'name': 'XWinograd'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'Accuracy',
+                                                        'value': 89.06}],
+                                           'tags': ['Reasoning']}]},
+                          {'id': 'generation',
+                           'benchmarks': [{'type': 'watsonx.ai',
+                                           'name': 'Language Understanding',
+                                           'description': 'Generation task '
+                                                          'that generates '
+                                                          'text. The SacreBLEU '
+                                                          'score is calculated '
+                                                          'for one dataset of '
+                                                          'marketing emails.',
+                                           'language': 'English',
+                                           'dataset': {'name': 'Generation'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'SacreBLEU',
+                                                        'value': 7.06}],
+                                           'tags': ['Generation']},
+                                          {'type': 'academic',
+                                           'name': 'bluebench',
+                                           'description': 'Uses a dataset of '
+                                                          '500 user prompts '
+                                                          'from live data '
+                                                          'submitted to the '
+                                                          'crowd-sourcing '
+                                                          'platform Chatbot '
+                                                          'Arena to evaluate a '
+                                                          "model's ability to "
+                                                          'answer questions. '
+                                                          'Metric shows the '
+                                                          'win rate for model '
+                                                          'answers.',
+                                           'language': 'English',
+                                           'dataset': {'name': 'Arena-Hard'},
+                                           'prompt': {'number_of_shots': 0},
+                                           'metrics': [{'name': 'Win rate',
+                                                        'value': 26.38}],
+                                           'tags': ['Chatbot Ability']},
+                                          {'type': 'academic',
+                                           'name': 'bluebench',
+                                           'description': 'Uses a dataset of '
+                                                          'questions designed '
+                                                          'to provoke harmful '
+                                                          'responses to '
+                                                          'evaluate whether a '
+                                                          'model is '
+                                                          'susceptible to '
+                                                          'safety '
+                                                          'vulnerabilities. '
+                                                          'Metric measures the '
+                                                          "model's safety.",
+                                           'language': 'English',
+                                           'dataset': {'name': 'AttaQ 500'},
+                                           'prompt': {'number_of_shots': 0},
+                                           'metrics': [{'name': 'Safety',
+                                                        'value': 92.37}],
+                                           'tags': ['Safety & Bias']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses a dataset that '
+                                                          'is part of the '
+                                                          'XGLUE benchmark '
+                                                          'designed for '
+                                                          'cross-lingual '
+                                                          'natural language '
+                                                          'generation (NLG) '
+                                                          'tasks. In this '
+                                                          'specific task, the '
+                                                          'goal is to generate '
+                                                          'a question based on '
+                                                          'a given passage. '
+                                                          'The dataset '
+                                                          'includes '
+                                                          'passage-question '
+                                                          'pairs from Bing, '
+                                                          'and spans six '
+                                                          'languages: English, '
+                                                          'French, German, '
+                                                          'Spanish, Italian, '
+                                                          'and Portuguese.',
+                                           'language': 'French',
+                                           'dataset': {'name': 'XGLUE.qg'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'ROUGE-L',
+                                                        'value': 26.78}],
+                                           'tags': ['Generation']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses a dataset that '
+                                                          'is part of the '
+                                                          'XGLUE benchmark '
+                                                          'designed for '
+                                                          'cross-lingual '
+                                                          'natural language '
+                                                          'generation (NLG) '
+                                                          'tasks. In this '
+                                                          'specific task, the '
+                                                          'goal is to generate '
+                                                          'a question based on '
+                                                          'a given passage. '
+                                                          'The dataset '
+                                                          'includes '
+                                                          'passage-question '
+                                                          'pairs from Bing, '
+                                                          'and spans six '
+                                                          'languages: English, '
+                                                          'French, German, '
+                                                          'Spanish, Italian, '
+                                                          'and Portuguese.',
+                                           'language': 'German',
+                                           'dataset': {'name': 'XGLUE.qg'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'ROUGE-L',
+                                                        'value': 29.69}],
+                                           'tags': ['Generation']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses a dataset that '
+                                                          'is part of the '
+                                                          'XGLUE benchmark '
+                                                          'designed for '
+                                                          'cross-lingual '
+                                                          'natural language '
+                                                          'generation (NLG) '
+                                                          'tasks. In this '
+                                                          'specific task, the '
+                                                          'goal is to generate '
+                                                          'a question based on '
+                                                          'a given passage. '
+                                                          'The dataset '
+                                                          'includes '
+                                                          'passage-question '
+                                                          'pairs from Bing, '
+                                                          'and spans six '
+                                                          'languages: English, '
+                                                          'French, German, '
+                                                          'Spanish, Italian, '
+                                                          'and Portuguese.',
+                                           'language': 'Portuguese',
+                                           'dataset': {'name': 'XGLUE.qg'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'ROUGE-L',
+                                                        'value': 45.04}],
+                                           'tags': ['Generation']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses a dataset that '
+                                                          'is part of the '
+                                                          'XGLUE benchmark '
+                                                          'designed for '
+                                                          'cross-lingual '
+                                                          'natural language '
+                                                          'generation (NLG) '
+                                                          'tasks. In this '
+                                                          'specific task, the '
+                                                          'goal is to generate '
+                                                          'a question based on '
+                                                          'a given passage. '
+                                                          'The dataset '
+                                                          'includes '
+                                                          'passage-question '
+                                                          'pairs from Bing, '
+                                                          'and spans six '
+                                                          'languages: English, '
+                                                          'French, German, '
+                                                          'Spanish, Italian, '
+                                                          'and Portuguese.',
+                                           'language': 'Spanish',
+                                           'dataset': {'name': 'XGLUE.qg'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'ROUGE-L',
+                                                        'value': 54.09}],
+                                           'tags': ['Generation']}]},
+                          {'id': 'code'},
+                          {'id': 'extraction',
+                           'ratings': {'quality': 4},
+                           'benchmarks': [{'type': 'watsonx.ai',
+                                           'name': 'Language Understanding',
+                                           'description': 'Extraction task '
+                                                          'that extracts named '
+                                                          'entities and '
+                                                          'detects sentiment. '
+                                                          'The F1 score is '
+                                                          'averaged over 2 '
+                                                          'datasets: one '
+                                                          'dataset with 12 '
+                                                          'named entities and '
+                                                          'one dataset with 3 '
+                                                          'sentiment types.',
+                                           'language': 'English',
+                                           'dataset': {'name': 'Extraction'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'F1 score',
+                                                        'value': 52.75}],
+                                           'tags': ['Extraction']},
+                                          {'type': 'academic',
+                                           'name': 'bluebench',
+                                           'description': 'Uses 43 datasets '
+                                                          'from various '
+                                                          'domains, including '
+                                                          'biomedical, STEM, '
+                                                          'programming, social '
+                                                          'media, law, and '
+                                                          'finance to evaluate '
+                                                          "a model's ability "
+                                                          'to recognize named '
+                                                          'entities. Metric '
+                                                          'shows the F1 score.',
+                                           'language': 'English',
+                                           'dataset': {'name': 'Universal NER'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'F1 score',
+                                                        'value': 46.55}],
+                                           'tags': ['Extraction']}]},
+                          {'id': 'translation',
+                           'benchmarks': [{'type': 'academic',
+                                           'name': 'bluebench',
+                                           'description': 'Uses a dataset of '
+                                                          'English Wikipedia '
+                                                          'articles that were '
+                                                          'translated by '
+                                                          'professional human '
+                                                          'translators into '
+                                                          '101 languages to '
+                                                          "evaluate a model's "
+                                                          'ability to '
+                                                          'translate text. '
+                                                          'Metric shows the '
+                                                          'SacreBLEU score for '
+                                                          'translation '
+                                                          'quality.',
+                                           'language': 'English',
+                                           'dataset': {'name': 'FLoRes-101'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'SacreBLEU',
+                                                        'value': 40.56}],
+                                           'tags': ['Translation']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses a small '
+                                                          'dataset of 850 key '
+                                                          'English words to '
+                                                          "evaluate a model's "
+                                                          'ability to '
+                                                          'translate English '
+                                                          'sentences into '
+                                                          'these languages: '
+                                                          'French, German, '
+                                                          'Spanish, '
+                                                          'Portuguese, '
+                                                          'Japanese, and '
+                                                          'Korean. Metric '
+                                                          'shows the string '
+                                                          'containment score, '
+                                                          'which measures the '
+                                                          'word or character '
+                                                          'distance between '
+                                                          'the generated '
+                                                          'sentence and the '
+                                                          'reference '
+                                                          'translation.',
+                                           'language': 'French',
+                                           'dataset': {'name': 'Basic English'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'String '
+                                                                'Containment',
+                                                        'value': 93.29}],
+                                           'tags': ['Translation']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses a small '
+                                                          'dataset of 850 key '
+                                                          'English words to '
+                                                          "evaluate a model's "
+                                                          'ability to '
+                                                          'translate English '
+                                                          'sentences into '
+                                                          'these languages: '
+                                                          'French, German, '
+                                                          'Spanish, '
+                                                          'Portuguese, '
+                                                          'Japanese, and '
+                                                          'Korean. Metric '
+                                                          'shows the string '
+                                                          'containment score, '
+                                                          'which measures the '
+                                                          'word or character '
+                                                          'distance between '
+                                                          'the generated '
+                                                          'sentence and the '
+                                                          'reference '
+                                                          'translation.',
+                                           'language': 'German',
+                                           'dataset': {'name': 'Basic English'},
+                                           'prompt': {'number_of_shots': 10},
+                                           'metrics': [{'name': 'String '
+                                                                'Containment',
+                                                        'value': 91.53}],
+                                           'tags': ['Translation']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses a small '
+                                                          'dataset of 850 key '
+                                                          'English words to '
+                                                          "evaluate a model's "
+                                                          'ability to '
+                                                          'translate English '
+                                                          'sentences into '
+                                                          'these languages: '
+                                                          'French, German, '
+                                                          'Spanish, '
+                                                          'Portuguese, '
+                                                          'Japanese, and '
+                                                          'Korean. Metric '
+                                                          'shows the string '
+                                                          'containment score, '
+                                                          'which measures the '
+                                                          'word or character '
+                                                          'distance between '
+                                                          'the generated '
+                                                          'sentence and the '
+                                                          'reference '
+                                                          'translation.',
+                                           'language': 'Japanese',
+                                           'dataset': {'name': 'Basic English'},
+                                           'prompt': {'number_of_shots': 10},
+                                           'metrics': [{'name': 'String '
+                                                                'Containment',
+                                                        'value': 83.06}],
+                                           'tags': ['Translation']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses a small '
+                                                          'dataset of 850 key '
+                                                          'English words to '
+                                                          "evaluate a model's "
+                                                          'ability to '
+                                                          'translate English '
+                                                          'sentences into '
+                                                          'these languages: '
+                                                          'French, German, '
+                                                          'Spanish, '
+                                                          'Portuguese, '
+                                                          'Japanese, and '
+                                                          'Korean. Metric '
+                                                          'shows the string '
+                                                          'containment score, '
+                                                          'which measures the '
+                                                          'word or character '
+                                                          'distance between '
+                                                          'the generated '
+                                                          'sentence and the '
+                                                          'reference '
+                                                          'translation.',
+                                           'language': 'Korean',
+                                           'dataset': {'name': 'Basic English'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'String '
+                                                                'Containment',
+                                                        'value': 54.12}],
+                                           'tags': ['Translation']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses a small '
+                                                          'dataset of 850 key '
+                                                          'English words to '
+                                                          "evaluate a model's "
+                                                          'ability to '
+                                                          'translate English '
+                                                          'sentences into '
+                                                          'these languages: '
+                                                          'French, German, '
+                                                          'Spanish, '
+                                                          'Portuguese, '
+                                                          'Japanese, and '
+                                                          'Korean. Metric '
+                                                          'shows the string '
+                                                          'containment score, '
+                                                          'which measures the '
+                                                          'word or character '
+                                                          'distance between '
+                                                          'the generated '
+                                                          'sentence and the '
+                                                          'reference '
+                                                          'translation.',
+                                           'language': 'Portuguese',
+                                           'dataset': {'name': 'Basic English'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'String '
+                                                                'Containment',
+                                                        'value': 93.88}],
+                                           'tags': ['Translation']},
+                                          {'type': 'academic',
+                                           'name': 'Multilingual language '
+                                                   'understanding',
+                                           'description': 'Uses a small '
+                                                          'dataset of 850 key '
+                                                          'English words to '
+                                                          "evaluate a model's "
+                                                          'ability to '
+                                                          'translate English '
+                                                          'sentences into '
+                                                          'these languages: '
+                                                          'French, German, '
+                                                          'Spanish, '
+                                                          'Portuguese, '
+                                                          'Japanese, and '
+                                                          'Korean. Metric '
+                                                          'shows the string '
+                                                          'containment score, '
+                                                          'which measures the '
+                                                          'word or character '
+                                                          'distance between '
+                                                          'the generated '
+                                                          'sentence and the '
+                                                          'reference '
+                                                          'translation.',
+                                           'language': 'Spanish',
+                                           'dataset': {'name': 'Basic English'},
+                                           'prompt': {'number_of_shots': 5},
+                                           'metrics': [{'name': 'String '
+                                                                'Containment',
+                                                        'value': 92.35}],
+                                           'tags': ['Translation']}]},
+                          {'id': 'function_calling',
+                           'ratings': {'quality': 4}}],
+                'model_limits': {'max_sequence_length': 131072},
+                'limits': {'3f6acf43-ede8-413a-ac69-f8af3bb0cbfe': {'call_time': '5m0s'},
+                           'a3d2f92f-06f9-48d0-b2e6-a7ba2b4e0577': {'call_time': '10m0s'},
+                           'd18d88b9-be7a-46ec-be1e-aff14904f1e9': {'call_time': '10m0s'}},
+                'lifecycle': [{'id': 'available', 'start_date': '2024-12-06'}],
+                'versions': [{'version': '3.3.0',
+                              'available_date': '2024-12-06'}],
+                'supported_languages': ['en',
+                                        'de',
+                                        'fr',
+                                        'it',
+                                        'pt',
+                                        'hi',
+                                        'es',
+                                        'th'],
+                'router_info': {'version': '1.1.35',
+                                'build': '1.1.35',
+                                'build_date': '20260619142455',
+                                'max_concurrent_requests': 16,
+                                'balance_mode': 2}}]}
+((venv) ) 
+karti@kartik MINGW64 ~/Desktop/VentureArchitect AI
+$ 

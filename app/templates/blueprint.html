@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block title %}Startup Blueprint — VentureArchitect AI{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <!-- Blueprint Header -->
+    <div class="va-blueprint-header mb-5" id="blueprint-header">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <div class="va-section-badge mb-3">
+                    <i class="bi bi-file-earmark-check-fill me-1"></i>Complete Startup Blueprint
+                </div>
+                <h1 class="va-blueprint-title" id="blueprintTitle">Generating your blueprint...</h1>
+                <p class="text-muted" id="blueprintSubtitle">Powered by 5 IBM Granite AI Agents</p>
+            </div>
+            <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                <button class="btn va-btn-ghost me-2" id="copyBtn" title="Copy Blueprint">
+                    <i class="bi bi-clipboard me-1"></i>Copy
+                </button>
+                <button class="btn va-btn-primary" id="newBlueprintBtn">
+                    <i class="bi bi-plus-circle me-1"></i>New Blueprint
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading State (shown initially) -->
+    <div id="blueprint-loading" class="text-center py-5">
+        <div class="va-thinking-animation mx-auto">
+            <div class="va-thinking-ring"></div>
+            <div class="va-thinking-ring"></div>
+            <div class="va-thinking-ring"></div>
+            <div class="va-thinking-core">
+                <i class="bi bi-cpu-fill"></i>
+            </div>
+        </div>
+        <h4 class="mt-4">Loading Blueprint...</h4>
+        <p class="text-muted">Retrieving your AI-generated startup blueprint</p>
+    </div>
+
+    <!-- Error State -->
+    <div id="blueprint-error" class="d-none">
+        <div class="va-error-card text-center py-5">
+            <div class="va-error-icon mb-3">
+                <i class="bi bi-exclamation-triangle-fill"></i>
+            </div>
+            <h4>Blueprint Not Found</h4>
+            <p class="text-muted" id="errorMessage">No blueprint data was found. Please generate a new blueprint.</p>
+            <a href="/#generate" class="btn va-btn-primary mt-3">
+                <i class="bi bi-rocket-takeoff me-1"></i>Generate New Blueprint
+            </a>
+        </div>
+    </div>
+
+    <!-- Blueprint Content (populated by JS) -->
+    <div id="blueprint-content" class="d-none">
+
+        <!-- Quick Stats Row -->
+        <div class="row g-3 mb-5" id="blueprintStats">
+            <div class="col-6 col-md-3">
+                <div class="va-stat-card">
+                    <div class="va-stat-card-icon"><i class="bi bi-robot"></i></div>
+                    <div class="va-stat-card-value">5</div>
+                    <div class="va-stat-card-label">AI Agents</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="va-stat-card">
+                    <div class="va-stat-card-icon"><i class="bi bi-file-text"></i></div>
+                    <div class="va-stat-card-value" id="sectionCount">20+</div>
+                    <div class="va-stat-card-label">Sections</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="va-stat-card">
+                    <div class="va-stat-card-icon"><i class="bi bi-clock"></i></div>
+                    <div class="va-stat-card-value" id="generationTime">~90s</div>
+                    <div class="va-stat-card-label">Gen Time</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="va-stat-card">
+                    <div class="va-stat-card-icon"><i class="bi bi-check-circle-fill text-success"></i></div>
+                    <div class="va-stat-card-value text-success" id="successCount">5/5</div>
+                    <div class="va-stat-card-label">Agents Done</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Pills -->
+        <div class="va-section-nav mb-5" id="sectionNav">
+            <div class="d-flex flex-wrap gap-2">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+
+        <!-- Blueprint Sections - populated dynamically -->
+        <div id="blueprintSections">
+            <!-- Sections rendered by JS -->
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script src="{{ url_for('static', filename='js/blueprint.js') }}"></script>
+{% endblock %}

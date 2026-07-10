@@ -1,0 +1,417 @@
+{% extends "base.html" %}
+
+{% block title %}VentureArchitect AI — AI Startup Co-Founder{% endblock %}
+
+{% block content %}
+
+<!-- ===== HERO SECTION ===== -->
+<section class="va-hero" id="hero">
+    <div class="va-hero-bg"></div>
+    <div class="va-hero-grid"></div>
+    <div class="container position-relative">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-9">
+                <div class="va-badge-pill mb-4 fade-in-up">
+                    <span class="va-pulse-dot"></span>
+                    <span>Powered by IBM watsonx.ai &amp; IBM Granite Models</span>
+                </div>
+
+                <h1 class="va-hero-title fade-in-up delay-1">
+                    Your AI<br>
+                    <span class="va-gradient-text">Startup Co-Founder</span>
+                </h1>
+
+                <p class="va-hero-subtitle fade-in-up delay-2">
+                    Transform any raw startup idea into a complete, investor-ready blueprint in minutes.
+                    Five specialized AI agents analyze your idea, research your market, design your business model,
+                    assess risks, and craft your pitch — all automatically.
+                </p>
+
+                <div class="d-flex flex-wrap justify-content-center gap-3 fade-in-up delay-3">
+                    <a href="#generate" class="btn va-btn-primary btn-lg px-5">
+                        <i class="bi bi-rocket-takeoff me-2"></i>Generate My Blueprint
+                    </a>
+                    <a href="#how-it-works" class="btn va-btn-ghost btn-lg px-5">
+                        <i class="bi bi-play-circle me-2"></i>See How It Works
+                    </a>
+                </div>
+
+                <div class="va-hero-stats row mt-5 g-3 fade-in-up delay-4">
+                    <div class="col-4">
+                        <div class="va-stat-item">
+                            <div class="va-stat-number">5</div>
+                            <div class="va-stat-label">AI Agents</div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="va-stat-item">
+                            <div class="va-stat-number">20+</div>
+                            <div class="va-stat-label">Blueprint Sections</div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="va-stat-item">
+                            <div class="va-stat-number">IBM</div>
+                            <div class="va-stat-label">Granite AI</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== AGENTS SECTION ===== -->
+<section class="py-5 va-section" id="agents">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="va-section-badge mb-3">AI Agent Pipeline</div>
+            <h2 class="va-section-title">Five Specialized AI Agents</h2>
+            <p class="va-section-subtitle">Each agent is an expert in its domain. Together, they build your complete startup blueprint.</p>
+        </div>
+
+        <div class="va-pipeline-container">
+            <!-- Agent Pipeline Visual -->
+            <div class="row justify-content-center g-0">
+                <div class="col-12">
+                    <div class="va-pipeline">
+
+                        <div class="va-pipeline-agent" data-agent="1">
+                            <div class="va-agent-card">
+                                <div class="va-agent-icon" style="--agent-color: #6366f1;">
+                                    <i class="bi bi-lightbulb-fill"></i>
+                                </div>
+                                <div class="va-agent-number">01</div>
+                                <h5 class="va-agent-name">Idea Analysis</h5>
+                                <p class="va-agent-desc">Refines your concept, defines the problem, target audience &amp; value proposition</p>
+                                <div class="va-agent-tags">
+                                    <span class="va-tag">Problem Statement</span>
+                                    <span class="va-tag">Value Prop</span>
+                                    <span class="va-tag">Key Features</span>
+                                </div>
+                            </div>
+                            <div class="va-pipeline-arrow"><i class="bi bi-arrow-right-circle-fill"></i></div>
+                        </div>
+
+                        <div class="va-pipeline-agent" data-agent="2">
+                            <div class="va-agent-card">
+                                <div class="va-agent-icon" style="--agent-color: #0ea5e9;">
+                                    <i class="bi bi-graph-up-arrow"></i>
+                                </div>
+                                <div class="va-agent-number">02</div>
+                                <h5 class="va-agent-name">Market Research</h5>
+                                <p class="va-agent-desc">Analyzes TAM/SAM/SOM, industry trends, customer segments &amp; competitors</p>
+                                <div class="va-agent-tags">
+                                    <span class="va-tag">Market Size</span>
+                                    <span class="va-tag">Competitors</span>
+                                    <span class="va-tag">Trends</span>
+                                </div>
+                            </div>
+                            <div class="va-pipeline-arrow"><i class="bi bi-arrow-right-circle-fill"></i></div>
+                        </div>
+
+                        <div class="va-pipeline-agent" data-agent="3">
+                            <div class="va-agent-card">
+                                <div class="va-agent-icon" style="--agent-color: #10b981;">
+                                    <i class="bi bi-diagram-3-fill"></i>
+                                </div>
+                                <div class="va-agent-number">03</div>
+                                <h5 class="va-agent-name">Business Strategy</h5>
+                                <p class="va-agent-desc">Designs business model canvas, revenue strategy, pricing &amp; GTM plan</p>
+                                <div class="va-agent-tags">
+                                    <span class="va-tag">BMC</span>
+                                    <span class="va-tag">Revenue</span>
+                                    <span class="va-tag">GTM</span>
+                                </div>
+                            </div>
+                            <div class="va-pipeline-arrow"><i class="bi bi-arrow-right-circle-fill"></i></div>
+                        </div>
+
+                        <div class="va-pipeline-agent" data-agent="4">
+                            <div class="va-agent-card">
+                                <div class="va-agent-icon" style="--agent-color: #f59e0b;">
+                                    <i class="bi bi-shield-exclamation"></i>
+                                </div>
+                                <div class="va-agent-number">04</div>
+                                <h5 class="va-agent-name">Risk Analysis</h5>
+                                <p class="va-agent-desc">Identifies risks, creates mitigation strategies &amp; 12-month roadmap</p>
+                                <div class="va-agent-tags">
+                                    <span class="va-tag">Risk Matrix</span>
+                                    <span class="va-tag">Mitigation</span>
+                                    <span class="va-tag">Roadmap</span>
+                                </div>
+                            </div>
+                            <div class="va-pipeline-arrow"><i class="bi bi-arrow-right-circle-fill"></i></div>
+                        </div>
+
+                        <div class="va-pipeline-agent" data-agent="5">
+                            <div class="va-agent-card">
+                                <div class="va-agent-icon" style="--agent-color: #ec4899;">
+                                    <i class="bi bi-megaphone-fill"></i>
+                                </div>
+                                <div class="va-agent-number">05</div>
+                                <h5 class="va-agent-name">Investor Pitch</h5>
+                                <p class="va-agent-desc">Crafts elevator pitch, one-pager, FAQ &amp; investor-ready summary</p>
+                                <div class="va-agent-tags">
+                                    <span class="va-tag">Elevator Pitch</span>
+                                    <span class="va-tag">One-Pager</span>
+                                    <span class="va-tag">Summary</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Supervisor badge -->
+        <div class="text-center mt-4">
+            <div class="va-supervisor-badge">
+                <i class="bi bi-cpu-fill me-2"></i>
+                <strong>Supervisor Agent</strong> coordinates all 5 agents — passing context, building on prior outputs, and synthesizing your complete blueprint
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FEATURES SECTION ===== -->
+<section class="py-5 va-section va-section-alt" id="features">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="va-section-badge mb-3">What You Get</div>
+            <h2 class="va-section-title">Everything a Founder Needs</h2>
+            <p class="va-section-subtitle">Your blueprint covers every dimension investors and advisors will ask about.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="va-feature-card">
+                    <div class="va-feature-icon" style="background: rgba(99,102,241,0.15); color: #818cf8;">
+                        <i class="bi bi-lightbulb-fill"></i>
+                    </div>
+                    <h5>Idea Refinement</h5>
+                    <p>Transform a rough concept into a crisp, investor-ready startup concept with problem-solution clarity.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="va-feature-card">
+                    <div class="va-feature-icon" style="background: rgba(14,165,233,0.15); color: #38bdf8;">
+                        <i class="bi bi-bar-chart-fill"></i>
+                    </div>
+                    <h5>Market Research</h5>
+                    <p>TAM/SAM/SOM analysis, industry trends, customer segments and competitive landscape deep-dive.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="va-feature-card">
+                    <div class="va-feature-icon" style="background: rgba(16,185,129,0.15); color: #34d399;">
+                        <i class="bi bi-grid-fill"></i>
+                    </div>
+                    <h5>Business Model Canvas</h5>
+                    <p>Full 9-block BMC with revenue streams, pricing strategy, channels and unit economics.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="va-feature-card">
+                    <div class="va-feature-icon" style="background: rgba(245,158,11,0.15); color: #fbbf24;">
+                        <i class="bi bi-shield-check-fill"></i>
+                    </div>
+                    <h5>Risk Analysis</h5>
+                    <p>Risk matrix with probability/impact scores and concrete mitigation strategies for each risk.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="va-feature-card">
+                    <div class="va-feature-icon" style="background: rgba(236,72,153,0.15); color: #f472b6;">
+                        <i class="bi bi-calendar-check-fill"></i>
+                    </div>
+                    <h5>12-Month Roadmap</h5>
+                    <p>Quarterly milestones with clear deliverables from foundation through launch to scale.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="va-feature-card">
+                    <div class="va-feature-icon" style="background: rgba(139,92,246,0.15); color: #a78bfa;">
+                        <i class="bi bi-briefcase-fill"></i>
+                    </div>
+                    <h5>Investor Pitch</h5>
+                    <p>60-second elevator pitch, one-page investor summary, pre-empted FAQ and funding ask.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="py-5 va-section" id="how-it-works">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="va-section-badge mb-3">Process</div>
+            <h2 class="va-section-title">How It Works</h2>
+            <p class="va-section-subtitle">Three steps from idea to investor-ready blueprint.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="va-step-card text-center">
+                    <div class="va-step-number">1</div>
+                    <div class="va-step-icon"><i class="bi bi-pencil-fill"></i></div>
+                    <h5>Describe Your Idea</h5>
+                    <p>Write your startup idea in plain English. No need to structure it — just describe what you want to build and why.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="va-step-card text-center">
+                    <div class="va-step-number">2</div>
+                    <div class="va-step-icon"><i class="bi bi-cpu-fill"></i></div>
+                    <h5>AI Agents Analyze</h5>
+                    <p>Five IBM Granite-powered AI agents work in sequence, each building on the last, analyzing every dimension of your startup.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="va-step-card text-center">
+                    <div class="va-step-number">3</div>
+                    <div class="va-step-icon"><i class="bi bi-file-earmark-check-fill"></i></div>
+                    <h5>Get Your Blueprint</h5>
+                    <p>Receive a complete, structured startup blueprint ready to share with investors, co-founders, or accelerators.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== GENERATE SECTION ===== -->
+<section class="py-5 va-section va-generate-section" id="generate">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-center mb-5">
+                    <div class="va-section-badge mb-3">
+                        <i class="bi bi-rocket-takeoff me-1"></i>Launch Your Blueprint
+                    </div>
+                    <h2 class="va-section-title">Describe Your Startup Idea</h2>
+                    <p class="va-section-subtitle">Be as descriptive as possible. The more context you provide, the better your blueprint.</p>
+                </div>
+
+                <div class="va-generate-card">
+                    <div id="input-phase">
+                        <div class="mb-4">
+                            <label for="startupIdea" class="form-label va-input-label">
+                                <i class="bi bi-lightbulb me-2 text-warning"></i>Your Startup Idea
+                            </label>
+                            <textarea
+                                id="startupIdea"
+                                class="form-control va-textarea"
+                                rows="6"
+                                placeholder="Example: A platform that connects freelance chefs with busy professionals who want healthy home-cooked meals delivered. The chefs cook in small batches, customers subscribe weekly, and we handle logistics, payments and quality control..."
+                                maxlength="2000"
+                            ></textarea>
+                            <div class="d-flex justify-content-between mt-2">
+                                <small class="text-muted">
+                                    <i class="bi bi-info-circle me-1"></i>
+                                    Minimum 10 characters. More detail = better blueprint.
+                                </small>
+                                <small class="text-muted" id="charCount">0 / 2000</small>
+                            </div>
+                        </div>
+
+                        <div class="va-example-prompts mb-4">
+                            <p class="text-muted small mb-2"><i class="bi bi-magic me-1"></i>Quick examples:</p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <button class="btn va-example-btn" data-idea="An AI-powered legal document assistant that helps small businesses generate, review, and understand contracts without expensive lawyers. Uses NLP to flag risky clauses and suggests improvements in plain English.">⚖️ AI Legal Assistant</button>
+                                <button class="btn va-example-btn" data-idea="A B2B SaaS platform that uses computer vision to automatically detect defects in manufacturing production lines in real-time, reducing waste by 40% and eliminating manual quality inspection.">🏭 Manufacturing AI</button>
+                                <button class="btn va-example-btn" data-idea="A mental wellness app for remote workers that provides AI-powered therapy sessions, daily check-ins, burnout detection, and connects users with licensed therapists for critical cases.">🧠 Mental Wellness App</button>
+                                <button class="btn va-example-btn" data-idea="A marketplace platform connecting sustainable fashion designers with eco-conscious consumers, featuring blockchain-verified supply chain transparency and a rental model for premium pieces.">♻️ Sustainable Fashion</button>
+                            </div>
+                        </div>
+
+                        <button id="generateBtn" class="btn va-btn-primary btn-lg w-100 py-3">
+                            <i class="bi bi-rocket-takeoff me-2"></i>
+                            Generate My Startup Blueprint
+                        </button>
+                    </div>
+
+                    <!-- Loading / Progress Phase -->
+                    <div id="loading-phase" class="d-none">
+                        <div class="text-center mb-4">
+                            <div class="va-thinking-animation">
+                                <div class="va-thinking-ring"></div>
+                                <div class="va-thinking-ring"></div>
+                                <div class="va-thinking-ring"></div>
+                                <div class="va-thinking-core">
+                                    <i class="bi bi-cpu-fill"></i>
+                                </div>
+                            </div>
+                            <h4 class="mt-4 mb-1">AI Agents Working...</h4>
+                            <p class="text-muted" id="currentAgentLabel">Initializing pipeline</p>
+                        </div>
+
+                        <!-- Progress Steps -->
+                        <div class="va-progress-tracker">
+                            <div class="va-progress-step" id="step-0">
+                                <div class="va-step-dot">
+                                    <i class="bi bi-lightbulb-fill"></i>
+                                </div>
+                                <div class="va-step-info">
+                                    <div class="va-step-name">Idea Analysis Agent</div>
+                                    <div class="va-step-status">Waiting...</div>
+                                </div>
+                            </div>
+                            <div class="va-progress-step" id="step-1">
+                                <div class="va-step-dot">
+                                    <i class="bi bi-graph-up-arrow"></i>
+                                </div>
+                                <div class="va-step-info">
+                                    <div class="va-step-name">Market Research Agent</div>
+                                    <div class="va-step-status">Waiting...</div>
+                                </div>
+                            </div>
+                            <div class="va-progress-step" id="step-2">
+                                <div class="va-step-dot">
+                                    <i class="bi bi-diagram-3-fill"></i>
+                                </div>
+                                <div class="va-step-info">
+                                    <div class="va-step-name">Business Strategy Agent</div>
+                                    <div class="va-step-status">Waiting...</div>
+                                </div>
+                            </div>
+                            <div class="va-progress-step" id="step-3">
+                                <div class="va-step-dot">
+                                    <i class="bi bi-shield-exclamation"></i>
+                                </div>
+                                <div class="va-step-info">
+                                    <div class="va-step-name">Risk Analysis Agent</div>
+                                    <div class="va-step-status">Waiting...</div>
+                                </div>
+                            </div>
+                            <div class="va-progress-step" id="step-4">
+                                <div class="va-step-dot">
+                                    <i class="bi bi-megaphone-fill"></i>
+                                </div>
+                                <div class="va-step-info">
+                                    <div class="va-step-name">Investor Pitch Agent</div>
+                                    <div class="va-step-status">Waiting...</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <div class="progress va-progress-bar mb-2" style="height: 6px;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated va-progress-fill" id="overallProgress" role="progressbar" style="width: 0%"></div>
+                            </div>
+                            <small class="text-muted">This typically takes 60-120 seconds depending on model response time.</small>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}

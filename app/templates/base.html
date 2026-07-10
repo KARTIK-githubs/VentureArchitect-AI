@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VentureArchitect AI — Transform your startup idea into an investor-ready blueprint powered by IBM watsonx.ai">
+    <title>{% block title %}VentureArchitect AI{% endblock %}</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark va-navbar sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+                <div class="va-logo-icon">
+                    <i class="bi bi-cpu-fill"></i>
+                </div>
+                <span class="va-logo-text">VentureArchitect <span class="va-logo-ai">AI</span></span>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-1">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#features">
+                            <i class="bi bi-grid-3x3-gap me-1"></i>Features
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#agents">
+                            <i class="bi bi-diagram-3 me-1"></i>Agents
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#how-it-works">
+                            <i class="bi bi-lightning me-1"></i>How It Works
+                        </a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn va-btn-primary btn-sm px-4" href="/#generate">
+                            <i class="bi bi-rocket-takeoff me-1"></i>Generate Blueprint
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="va-footer py-5 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                        <div class="va-logo-icon va-logo-icon-sm">
+                            <i class="bi bi-cpu-fill"></i>
+                        </div>
+                        <span class="va-logo-text fs-6">VentureArchitect <span class="va-logo-ai">AI</span></span>
+                    </div>
+                    <p class="text-muted small mb-0">Transform startup ideas into investor-ready blueprints with AI.</p>
+                </div>
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <p class="text-muted small mb-1">Powered by</p>
+                    <div class="d-flex align-items-center justify-content-center gap-2">
+                        <span class="va-badge-ibm">IBM watsonx.ai</span>
+                        <span class="text-muted">+</span>
+                        <span class="va-badge-granite">IBM Granite</span>
+                    </div>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <p class="text-muted small mb-0">© 2024 VentureArchitect AI</p>
+                    <p class="text-muted small mb-0">Built for founders, by AI.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,984 @@
+/* ============================================================
+   VentureArchitect AI — Main Stylesheet
+   Dark-mode SaaS startup dashboard
+   ============================================================ */
+
+/* ── Custom Properties ── */
+:root {
+    --va-bg:          #0a0c0f;
+    --va-bg-2:        #0f1117;
+    --va-bg-3:        #141720;
+    --va-surface:     #1a1d27;
+    --va-surface-2:   #1f2333;
+    --va-border:      rgba(255,255,255,0.08);
+    --va-border-2:    rgba(255,255,255,0.12);
+    --va-text:        #e2e8f0;
+    --va-text-muted:  #8b92a8;
+    --va-accent:      #6366f1;
+    --va-accent-2:    #818cf8;
+    --va-accent-glow: rgba(99,102,241,0.25);
+    --va-green:       #10b981;
+    --va-blue:        #0ea5e9;
+    --va-amber:       #f59e0b;
+    --va-pink:        #ec4899;
+    --va-red:         #ef4444;
+    --va-font:        'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --va-mono:        'JetBrains Mono', monospace;
+    --va-radius:      12px;
+    --va-radius-sm:   8px;
+    --va-radius-lg:   20px;
+    --va-shadow:      0 4px 24px rgba(0,0,0,0.4);
+    --va-shadow-glow: 0 0 40px rgba(99,102,241,0.15);
+    --va-transition:  0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Base ── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: var(--va-font);
+    background-color: var(--va-bg);
+    color: var(--va-text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ── Typography ── */
+h1, h2, h3, h4, h5, h6 { font-weight: 700; color: var(--va-text); }
+
+a { color: var(--va-accent-2); text-decoration: none; transition: color var(--va-transition); }
+a:hover { color: var(--va-accent); }
+
+code, pre {
+    font-family: var(--va-mono);
+    background: var(--va-surface);
+    border-radius: var(--va-radius-sm);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--va-bg-2); }
+::-webkit-scrollbar-thumb { background: var(--va-surface-2); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--va-accent); }
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.va-navbar {
+    background: rgba(10, 12, 15, 0.85) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--va-border);
+    padding: 0.85rem 0;
+    transition: all var(--va-transition);
+}
+
+.va-logo-icon {
+    width: 36px; height: 36px;
+    background: linear-gradient(135deg, var(--va-accent), #8b5cf6);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.va-logo-icon-sm {
+    width: 28px; height: 28px;
+    font-size: 0.8rem;
+    border-radius: 8px;
+}
+
+.va-logo-text {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--va-text);
+    letter-spacing: -0.02em;
+}
+
+.va-logo-ai {
+    color: var(--va-accent-2);
+    background: linear-gradient(135deg, var(--va-accent), #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.va-navbar .nav-link {
+    color: var(--va-text-muted) !important;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.5rem 0.75rem !important;
+    border-radius: var(--va-radius-sm);
+    transition: all var(--va-transition);
+}
+
+.va-navbar .nav-link:hover {
+    color: var(--va-text) !important;
+    background: var(--va-surface);
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.va-btn-primary {
+    background: linear-gradient(135deg, var(--va-accent), #8b5cf6);
+    border: none;
+    color: #fff !important;
+    font-weight: 600;
+    border-radius: var(--va-radius-sm);
+    padding: 0.5rem 1.25rem;
+    transition: all var(--va-transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.va-btn-primary::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, #818cf8, #a78bfa);
+    opacity: 0;
+    transition: opacity var(--va-transition);
+}
+
+.va-btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px var(--va-accent-glow);
+    color: #fff !important;
+}
+
+.va-btn-primary:hover::before { opacity: 1; }
+.va-btn-primary:active { transform: translateY(0); }
+.va-btn-primary span, .va-btn-primary i { position: relative; z-index: 1; }
+.va-btn-primary * { position: relative; z-index: 1; }
+
+.va-btn-ghost {
+    background: transparent;
+    border: 1px solid var(--va-border-2);
+    color: var(--va-text) !important;
+    font-weight: 500;
+    border-radius: var(--va-radius-sm);
+    transition: all var(--va-transition);
+}
+
+.va-btn-ghost:hover {
+    background: var(--va-surface);
+    border-color: var(--va-accent);
+    color: var(--va-text) !important;
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+.va-hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 6rem 0 4rem;
+    overflow: hidden;
+}
+
+.va-hero-bg {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(99,102,241,0.15), transparent),
+                radial-gradient(ellipse 60% 40% at 80% 50%, rgba(139,92,246,0.08), transparent),
+                radial-gradient(ellipse 60% 40% at 20% 80%, rgba(14,165,233,0.06), transparent);
+    pointer-events: none;
+}
+
+.va-hero-grid {
+    position: absolute; inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+    pointer-events: none;
+}
+
+.va-hero-title {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+}
+
+.va-gradient-text {
+    background: linear-gradient(135deg, var(--va-accent-2) 0%, #a78bfa 40%, #e879f9 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.va-hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--va-text-muted);
+    max-width: 640px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.8;
+}
+
+/* Animated hero badge */
+.va-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    background: var(--va-surface);
+    border: 1px solid var(--va-border-2);
+    border-radius: 100px;
+    font-size: 0.85rem;
+    color: var(--va-text-muted);
+}
+
+.va-pulse-dot {
+    width: 8px; height: 8px;
+    background: var(--va-green);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+/* Hero stats */
+.va-hero-stats { max-width: 500px; margin: 2rem auto 0; }
+
+.va-stat-item {
+    padding: 1.25rem;
+    background: var(--va-surface);
+    border: 1px solid var(--va-border);
+    border-radius: var(--va-radius);
+}
+
+.va-stat-number {
+    font-size: 2rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--va-accent-2), #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.va-stat-label {
+    font-size: 0.78rem;
+    color: var(--va-text-muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ============================================================
+   SECTION SHARED
+   ============================================================ */
+.va-section { padding: 5rem 0; }
+
+.va-section-alt {
+    background: linear-gradient(to bottom, var(--va-bg) 0%, var(--va-bg-2) 50%, var(--va-bg) 100%);
+}
+
+.va-section-badge {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    background: rgba(99,102,241,0.12);
+    border: 1px solid rgba(99,102,241,0.25);
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--va-accent-2);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.va-section-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+.va-section-subtitle {
+    font-size: 1.05rem;
+    color: var(--va-text-muted);
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+/* ============================================================
+   AGENT PIPELINE
+   ============================================================ */
+.va-pipeline {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    overflow-x: auto;
+    padding: 1rem 0;
+}
+
+.va-pipeline-agent {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+}
+
+.va-agent-card {
+    flex: 1;
+    background: var(--va-surface);
+    border: 1px solid var(--va-border);
+    border-radius: var(--va-radius);
+    padding: 1.5rem;
+    transition: all var(--va-transition);
+    cursor: default;
+}
+
+.va-agent-card:hover {
+    border-color: var(--va-border-2);
+    transform: translateY(-3px);
+    box-shadow: var(--va-shadow);
+    background: var(--va-surface-2);
+}
+
+.va-agent-icon {
+    width: 48px; height: 48px;
+    background: rgba(var(--agent-color), 0.15);
+    border-radius: var(--va-radius-sm);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.25rem;
+    color: var(--agent-color);
+    margin-bottom: 1rem;
+    /* color is set inline */
+}
+
+.va-agent-number {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--va-text-muted);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.25rem;
+    font-family: var(--va-mono);
+}
+
+.va-agent-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.va-agent-desc {
+    font-size: 0.8rem;
+    color: var(--va-text-muted);
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.va-agent-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+
+.va-tag {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.5rem;
+    background: var(--va-bg-3);
+    border: 1px solid var(--va-border);
+    border-radius: 100px;
+    color: var(--va-text-muted);
+}
+
+.va-pipeline-arrow {
+    padding: 0 0.5rem;
+    font-size: 1.25rem;
+    color: var(--va-accent);
+    flex-shrink: 0;
+    opacity: 0.6;
+}
+
+.va-supervisor-badge {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: rgba(99,102,241,0.08);
+    border: 1px solid rgba(99,102,241,0.2);
+    border-radius: var(--va-radius);
+    font-size: 0.9rem;
+    color: var(--va-text-muted);
+}
+
+/* ============================================================
+   FEATURE CARDS
+   ============================================================ */
+.va-feature-card {
+    background: var(--va-surface);
+    border: 1px solid var(--va-border);
+    border-radius: var(--va-radius);
+    padding: 2rem;
+    height: 100%;
+    transition: all var(--va-transition);
+}
+
+.va-feature-card:hover {
+    border-color: var(--va-border-2);
+    transform: translateY(-3px);
+    box-shadow: var(--va-shadow);
+}
+
+.va-feature-card h5 { font-size: 1rem; font-weight: 700; margin: 0.75rem 0 0.5rem; }
+.va-feature-card p { font-size: 0.875rem; color: var(--va-text-muted); margin: 0; }
+
+.va-feature-icon {
+    width: 44px; height: 44px;
+    border-radius: var(--va-radius-sm);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.25rem;
+}
+
+/* ============================================================
+   HOW IT WORKS — STEP CARDS
+   ============================================================ */
+.va-step-card {
+    background: var(--va-surface);
+    border: 1px solid var(--va-border);
+    border-radius: var(--va-radius);
+    padding: 2.5rem 2rem;
+    height: 100%;
+    position: relative;
+    transition: all var(--va-transition);
+}
+
+.va-step-card:hover {
+    border-color: var(--va-accent);
+    box-shadow: 0 0 30px var(--va-accent-glow);
+}
+
+.va-step-number {
+    position: absolute;
+    top: 1.25rem; left: 1.25rem;
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgba(99,102,241,0.12);
+    font-family: var(--va-mono);
+    line-height: 1;
+}
+
+.va-step-icon {
+    width: 56px; height: 56px;
+    background: linear-gradient(135deg, var(--va-accent), #8b5cf6);
+    border-radius: var(--va-radius);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 1.25rem;
+    color: #fff;
+}
+
+.va-step-card h5 { font-size: 1.05rem; margin-bottom: 0.75rem; }
+.va-step-card p { font-size: 0.875rem; color: var(--va-text-muted); margin: 0; }
+
+/* ============================================================
+   GENERATE SECTION
+   ============================================================ */
+.va-generate-section {
+    background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(99,102,241,0.06), transparent);
+}
+
+.va-generate-card {
+    background: var(--va-surface);
+    border: 1px solid var(--va-border-2);
+    border-radius: var(--va-radius-lg);
+    padding: 2.5rem;
+    box-shadow: var(--va-shadow);
+}
+
+.va-input-label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+.va-textarea {
+    background: var(--va-bg-3) !important;
+    border: 1px solid var(--va-border-2) !important;
+    color: var(--va-text) !important;
+    border-radius: var(--va-radius) !important;
+    padding: 1rem 1.25rem !important;
+    font-size: 0.95rem !important;
+    line-height: 1.7 !important;
+    resize: vertical;
+    transition: border-color var(--va-transition) !important;
+    font-family: var(--va-font) !important;
+}
+
+.va-textarea:focus {
+    border-color: var(--va-accent) !important;
+    box-shadow: 0 0 0 3px var(--va-accent-glow) !important;
+    outline: none !important;
+}
+
+.va-textarea::placeholder { color: rgba(139, 146, 168, 0.6) !important; }
+
+.va-example-btn {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.85rem;
+    background: var(--va-bg-3);
+    border: 1px solid var(--va-border);
+    color: var(--va-text-muted);
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all var(--va-transition);
+    white-space: nowrap;
+}
+
+.va-example-btn:hover {
+    background: var(--va-surface-2);
+    border-color: var(--va-accent);
+    color: var(--va-text);
+}
+
+/* ============================================================
+   PROGRESS TRACKER
+   ============================================================ */
+.va-progress-tracker { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.va-progress-step {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 1rem;
+    background: var(--va-bg-3);
+    border: 1px solid var(--va-border);
+    border-radius: var(--va-radius-sm);
+    transition: all var(--va-transition);
+}
+
+.va-progress-step.is-running {
+    border-color: var(--va-accent);
+    background: rgba(99,102,241,0.06);
+    box-shadow: 0 0 20px var(--va-accent-glow);
+}
+
+.va-progress-step.is-done {
+    border-color: rgba(16,185,129,0.4);
+    background: rgba(16,185,129,0.05);
+}
+
+.va-progress-step.is-error {
+    border-color: rgba(239,68,68,0.4);
+    background: rgba(239,68,68,0.05);
+}
+
+.va-step-dot {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--va-surface-2);
+    border: 2px solid var(--va-border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.9rem;
+    color: var(--va-text-muted);
+    flex-shrink: 0;
+    transition: all var(--va-transition);
+}
+
+.is-running .va-step-dot {
+    background: rgba(99,102,241,0.2);
+    border-color: var(--va-accent);
+    color: var(--va-accent-2);
+    animation: spin 1.5s linear infinite;
+}
+
+.is-done .va-step-dot {
+    background: rgba(16,185,129,0.2);
+    border-color: var(--va-green);
+    color: var(--va-green);
+}
+
+.is-error .va-step-dot {
+    background: rgba(239,68,68,0.2);
+    border-color: var(--va-red);
+    color: var(--va-red);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.va-step-info { flex: 1; }
+
+.va-step-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--va-text);
+}
+
+.va-step-status {
+    font-size: 0.78rem;
+    color: var(--va-text-muted);
+}
+
+.is-running .va-step-status { color: var(--va-accent-2); }
+.is-done .va-step-status { color: var(--va-green); }
+.is-error .va-step-status { color: var(--va-red); }
+
+.va-progress-bar { background: var(--va-bg-3); border-radius: 10px; }
+.va-progress-fill { background: linear-gradient(90deg, var(--va-accent), #a78bfa); }
+
+/* ============================================================
+   THINKING ANIMATION
+   ============================================================ */
+.va-thinking-animation {
+    position: relative;
+    width: 100px; height: 100px;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.va-thinking-ring {
+    position: absolute;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    animation: think-rotate 2s linear infinite;
+}
+
+.va-thinking-ring:nth-child(1) {
+    width: 100px; height: 100px;
+    border-top-color: var(--va-accent);
+    animation-duration: 2s;
+}
+
+.va-thinking-ring:nth-child(2) {
+    width: 74px; height: 74px;
+    border-right-color: #8b5cf6;
+    animation-duration: 1.5s;
+    animation-direction: reverse;
+}
+
+.va-thinking-ring:nth-child(3) {
+    width: 50px; height: 50px;
+    border-bottom-color: var(--va-blue);
+    animation-duration: 1s;
+}
+
+.va-thinking-core {
+    font-size: 1.5rem;
+    color: var(--va-accent-2);
+}
+
+@keyframes think-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ============================================================
+   BLUEPRINT PAGE
+   ============================================================ */
+.va-blueprint-header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--va-border);
+    margin-bottom: 2rem;
+}
+
+.va-blueprint-title {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.25rem;
+}
+
+/* Blueprint Section Cards */
+.va-blueprint-section {
+    background: var(--va-surface);
+    border: 1px solid var(--va-border);
+    border-radius: var(--va-radius-lg);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    transition: border-color var(--va-transition);
+}
+
+.va-blueprint-section:hover { border-color: var(--va-border-2); }
+
+.va-blueprint-section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.75rem;
+    background: var(--va-surface-2);
+    border-bottom: 1px solid var(--va-border);
+    cursor: pointer;
+}
+
+.va-blueprint-section-icon {
+    width: 40px; height: 40px;
+    border-radius: var(--va-radius-sm);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.va-blueprint-section-title {
+    flex: 1;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.va-blueprint-section-badge {
+    font-size: 0.72rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 100px;
+    font-weight: 600;
+    background: rgba(16,185,129,0.15);
+    color: var(--va-green);
+    border: 1px solid rgba(16,185,129,0.3);
+}
+
+.va-blueprint-section-body {
+    padding: 2rem;
+}
+
+/* Markdown content styling inside sections */
+.va-markdown-content {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--va-text);
+}
+
+.va-markdown-content h1,
+.va-markdown-content h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    border-bottom: 1px solid var(--va-border);
+    padding-bottom: 0.5rem;
+    margin: 1.75rem 0 1rem;
+    color: var(--va-text);
+}
+
+.va-markdown-content h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--va-accent-2);
+}
+
+.va-markdown-content h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin: 1.25rem 0 0.5rem;
+    color: var(--va-text);
+}
+
+.va-markdown-content ul, .va-markdown-content ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.va-markdown-content li { margin-bottom: 0.4rem; }
+
+.va-markdown-content p { margin-bottom: 1rem; }
+
+.va-markdown-content strong { color: var(--va-text); font-weight: 700; }
+
+.va-markdown-content em { color: var(--va-text-muted); }
+
+.va-markdown-content code {
+    padding: 0.15em 0.4em;
+    font-size: 0.85em;
+    background: var(--va-bg-3);
+    border: 1px solid var(--va-border);
+    border-radius: 4px;
+}
+
+.va-markdown-content pre {
+    padding: 1rem 1.25rem;
+    background: var(--va-bg-3);
+    border: 1px solid var(--va-border);
+    border-radius: var(--va-radius-sm);
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+.va-markdown-content blockquote {
+    border-left: 3px solid var(--va-accent);
+    padding: 0.75rem 1.25rem;
+    background: rgba(99,102,241,0.06);
+    border-radius: 0 var(--va-radius-sm) var(--va-radius-sm) 0;
+    margin-bottom: 1rem;
+    color: var(--va-text-muted);
+}
+
+.va-markdown-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    overflow: hidden;
+    border-radius: var(--va-radius-sm);
+}
+
+.va-markdown-content th {
+    background: var(--va-bg-3);
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--va-text-muted);
+    border-bottom: 1px solid var(--va-border);
+}
+
+.va-markdown-content td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--va-border);
+    vertical-align: top;
+}
+
+.va-markdown-content tr:last-child td { border-bottom: none; }
+.va-markdown-content tr:nth-child(even) td { background: rgba(255,255,255,0.01); }
+
+.va-markdown-content hr {
+    border: none;
+    border-top: 1px solid var(--va-border);
+    margin: 1.5rem 0;
+}
+
+/* Section nav pills */
+.va-section-nav {
+    position: sticky;
+    top: 72px;
+    z-index: 10;
+    background: var(--va-bg);
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--va-border);
+    margin-bottom: 2rem;
+}
+
+.va-nav-pill {
+    padding: 0.35rem 0.85rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    background: var(--va-surface);
+    border: 1px solid var(--va-border);
+    border-radius: 100px;
+    color: var(--va-text-muted);
+    cursor: pointer;
+    transition: all var(--va-transition);
+    white-space: nowrap;
+}
+
+.va-nav-pill:hover, .va-nav-pill.active {
+    background: rgba(99,102,241,0.12);
+    border-color: rgba(99,102,241,0.3);
+    color: var(--va-accent-2);
+}
+
+/* Blueprint stat cards */
+.va-stat-card {
+    background: var(--va-surface);
+    border: 1px solid var(--va-border);
+    border-radius: var(--va-radius);
+    padding: 1.25rem;
+    text-align: center;
+    transition: all var(--va-transition);
+}
+
+.va-stat-card:hover {
+    border-color: var(--va-border-2);
+    transform: translateY(-2px);
+}
+
+.va-stat-card-icon { font-size: 1.5rem; color: var(--va-accent-2); margin-bottom: 0.5rem; }
+.va-stat-card-value { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.02em; }
+.va-stat-card-label { font-size: 0.75rem; color: var(--va-text-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem; }
+
+/* Error card */
+.va-error-card {
+    background: var(--va-surface);
+    border: 1px solid rgba(239,68,68,0.3);
+    border-radius: var(--va-radius-lg);
+    padding: 3rem;
+}
+
+.va-error-icon {
+    font-size: 3rem;
+    color: var(--va-red);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.va-footer {
+    background: var(--va-bg-2);
+    border-top: 1px solid var(--va-border);
+}
+
+.va-badge-ibm {
+    padding: 0.2rem 0.6rem;
+    background: rgba(30, 94, 255, 0.15);
+    border: 1px solid rgba(30, 94, 255, 0.25);
+    border-radius: var(--va-radius-sm);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #6ea6ff;
+}
+
+.va-badge-granite {
+    padding: 0.2rem 0.6rem;
+    background: rgba(16,185,129,0.12);
+    border: 1px solid rgba(16,185,129,0.25);
+    border-radius: var(--va-radius-sm);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--va-green);
+}
+
+/* ============================================================
+   FADE-IN ANIMATIONS
+   ============================================================ */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.7s forwards;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.35s; }
+.delay-4 { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Intersection observer animations */
+.va-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.va-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+    .va-hero { padding: 4rem 0 3rem; min-height: auto; }
+    .va-generate-card { padding: 1.5rem; }
+    .va-pipeline { flex-direction: column; }
+    .va-pipeline-arrow { transform: rotate(90deg); margin: 0 auto; padding: 0.25rem 0; }
+    .va-pipeline-agent { flex-direction: column; }
+    .va-blueprint-section-body { padding: 1.25rem; }
+    .va-section-nav { position: relative; top: 0; }
+    .va-section { padding: 3rem 0; }
+}
+
+@media (max-width: 480px) {
+    .va-hero-title { font-size: 2.2rem; }
+    .va-section-title { font-size: 1.6rem; }
+    .va-generate-card { padding: 1.25rem; }
+}
