@@ -1,0 +1,72 @@
+{
+  "name": "VentureArchitect AI",
+  "description": "Transform any startup idea into an investor-ready blueprint in minutes. Powered by IBM watsonx.ai and IBM Granite Foundation Models.",
+  "repository": "https://github.com/KARTIK-githubs/venture-architect-ai",
+  "logo": "",
+  "keywords": [
+    "ai",
+    "startup",
+    "flask",
+    "ibm-watsonx",
+    "ibm-granite",
+    "llm",
+    "business-intelligence"
+  ],
+  "website": "https://venturearchitect-ai.onrender.com",
+  "success_url": "/health",
+  "scripts": {
+    "postdeploy": "echo 'VentureArchitect AI deployed successfully.'"
+  },
+  "env": {
+    "IBM_API_KEY": {
+      "description": "IBM Cloud API key for watsonx.ai access.",
+      "required": true
+    },
+    "IBM_PROJECT_ID": {
+      "description": "IBM watsonx.ai project ID.",
+      "required": true
+    },
+    "IBM_WATSONX_URL": {
+      "description": "IBM watsonx.ai service endpoint URL.",
+      "value": "https://us-south.ml.cloud.ibm.com",
+      "required": false
+    },
+    "FLASK_SECRET_KEY": {
+      "description": "A strong random secret key for Flask session signing.",
+      "generator": "secret",
+      "required": true
+    },
+    "FLASK_ENV": {
+      "description": "Flask runtime environment. Use 'production' for deployed instances.",
+      "value": "production",
+      "required": false
+    },
+    "FLASK_DEBUG": {
+      "description": "Enable Flask debug mode. Must be 'False' in production.",
+      "value": "False",
+      "required": false
+    },
+    "APP_NAME": {
+      "description": "Display name of the application.",
+      "value": "VentureArchitect AI",
+      "required": false
+    },
+    "APP_VERSION": {
+      "description": "Application version string.",
+      "value": "1.0.0",
+      "required": false
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "standard-1x"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "stack": "heroku-24"
+}
