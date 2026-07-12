@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="VentureArchitect AI — Transform your startup idea into an investor-ready blueprint powered by IBM watsonx.ai">
+    <meta name="description" content="AI-powered multi-agent platform that transforms startup ideas into investor-ready business blueprints.">
     <title>{% block title %}VentureArchitect AI{% endblock %}</title>
 
     <!-- Bootstrap 5 CSS -->
@@ -65,37 +65,54 @@
         {% block content %}{% endblock %}
     </main>
 
-    <!-- Footer -->
-    <footer class="va-footer py-5 mt-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="d-flex align-items-center gap-2 mb-2">
-                        <div class="va-logo-icon va-logo-icon-sm">
-                            <i class="bi bi-cpu-fill"></i>
-                        </div>
-                        <span class="va-logo-text fs-6">VentureArchitect <span class="va-logo-ai">AI</span></span>
+<!-- Footer -->
+<footer class="va-footer py-5 mt-5">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- Left -->
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                    <div class="va-logo-icon va-logo-icon-sm">
+                        <i class="bi bi-cpu-fill"></i>
                     </div>
-                    <p class="text-muted small mb-0">Transform startup ideas into investor-ready blueprints with AI.</p>
+                    <span class="va-logo-text fs-6">
+                        VentureArchitect <span class="va-logo-ai">AI</span>
+                    </span>
                 </div>
-                <div class="col-md-4 text-center mb-3 mb-md-0">
-                    <p class="text-muted small mb-1">Powered by</p>
-                    <div class="d-flex align-items-center justify-content-center gap-2">
-                        <span class="va-badge-ibm">IBM watsonx.ai</span>
-                        <span class="text-muted">+</span>
-                        <span class="va-badge-granite">IBM Granite</span>
-                    </div>
-                </div>
-                <div class="col-md-4 text-md-end">
-                    <p class="text-muted small mb-0">© 2024 VentureArchitect AI</p>
-                    <p class="text-muted small mb-0">Built for founders, by AI.</p>
+
+                <p class="text-muted small mb-0">
+                    Transform startup ideas into investor-ready blueprints with AI.
+                </p>
+            </div>
+
+            <!-- Center -->
+            <div class="col-md-4 text-center mb-3 mb-md-0">
+                <p class="text-muted small mb-2">Built with</p>
+
+                <div class="d-flex justify-content-center align-items-center gap-2 flex-wrap">
+                    <span class="va-badge-ibm">Python</span>
+                    <span class="text-muted">•</span>
+                    <span class="va-badge-granite">Flask</span>
+                    <span class="text-muted">•</span>
+                    <span class="va-badge-ibm">AI Agents</span>
                 </div>
             </div>
-        </div>
-    </footer>
 
+            <!-- Right -->
+            <div class="col-md-4 text-md-end text-center">
+                <p class="text-muted small mb-1">© 2026 VentureArchitect AI</p>
+                <p class="text-muted small mb-0">
+                    Designed &amp; Developed by Kartik Aggarwal
+                </p>
+            </div>
+
+        </div>
+    </div>
+</footer>
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     {% block extra_js %}{% endblock %}
 </body>
 </html>
