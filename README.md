@@ -1,293 +1,190 @@
 # VentureArchitect AI 🚀
 
-> **Transform any startup idea into an investor-ready blueprint in minutes.**
-> Powered by IBM watsonx.ai and IBM Granite Foundation Models.
+> **Transform your startup idea into a complete, investor-ready business blueprint using a multi-agent AI workflow.**
+
+🌐 **Live Demo:** https://venturearchitect-ai.onrender.com
 
 ---
 
 ## Overview
 
-VentureArchitect AI is a production-quality Flask web application that acts as an **AI startup co-founder**. It orchestrates five specialized IBM Granite-powered AI agents through a Supervisor Agent to analyze your raw startup idea and generate a comprehensive, investor-ready startup blueprint.
+VentureArchitect AI is a Flask-based web application that helps entrepreneurs transform early-stage startup ideas into structured business blueprints.
 
-### What It Generates
+Instead of relying on a single AI response, the application follows a **multi-agent workflow** where five specialized AI agents collaborate to analyze different aspects of a startup. Each agent contributes its expertise, and their outputs are combined into a comprehensive blueprint covering idea validation, market research, business strategy, risk analysis, and investor pitching.
 
-| Section | Agent |
-|---------|-------|
-| Startup Idea Refinement & Problem Statement | Idea Analysis Agent |
-| Target Audience & Value Proposition | Idea Analysis Agent |
-| Market Size (TAM/SAM/SOM) & Industry Trends | Market Research Agent |
-| Customer Segments & Competitor Analysis | Market Research Agent |
-| Business Model Canvas (all 9 blocks) | Business Strategy Agent |
-| Revenue Strategy & Pricing Tiers | Business Strategy Agent |
-| Go-To-Market Strategy & Unit Economics | Business Strategy Agent |
-| Risk Analysis Matrix & Mitigation Strategies | Risk Analysis Agent |
-| 12-Month Startup Roadmap | Risk Analysis Agent |
-| Funding Recommendations | Risk Analysis Agent |
-| 60-Second Elevator Pitch | Investor Pitch Agent |
-| One-Page Investor Summary | Investor Pitch Agent |
-| Investor FAQ & Pre-empted Objections | Investor Pitch Agent |
+Whether you're validating a new idea or preparing for a startup competition, VentureArchitect AI provides a structured starting point for turning concepts into actionable business plans.
 
 ---
 
-## Architecture
+## Features
 
+- 🤖 Multi-agent AI workflow coordinated by a Supervisor Agent
+- 💡 Startup idea validation and refinement
+- 📊 Market research and competitor analysis
+- 📈 Business model and revenue strategy generation
+- ⚠️ Risk assessment with mitigation strategies
+- 🎤 Investor pitch and executive summary generation
+- 📋 Interactive blueprint viewer with copy functionality
+- 📱 Responsive interface for desktop and mobile devices
+
+---
+
+## Workflow
+
+```text
+                     Startup Idea
+                          │
+                          ▼
+                  Supervisor Agent
+                          │
+      ┌──────────┬─────────┼─────────┬──────────┐
+      ▼          ▼         ▼         ▼          ▼
+  Idea        Market    Business    Risk    Investor
+ Analysis    Research   Strategy   Analysis   Pitch
+      │          │         │         │          │
+      └──────────┴─────────┴─────────┴──────────┘
+                          │
+                          ▼
+            Comprehensive Startup Blueprint
 ```
-VentureArchitect AI/
+
+Each agent focuses on a specific responsibility while building upon the previous agent's output, resulting in a structured and coherent business blueprint rather than a single generic response.
+
+---
+
+## Screenshots
+
+### 🏠 Landing Page
+
+![Landing Page](https://github.com/user-attachments/assets/6c2226dc-e729-4201-87de-993ecda86649)
+
+---
+
+### ⚙️ Blueprint Generation
+
+![Blueprint Generation](https://github.com/user-attachments/assets/18b9c94f-ec0f-4983-b0de-74b31dc5b82f)
+
+---
+
+### 📄 Generated Startup Blueprint
+
+![Generated Blueprint](https://github.com/user-attachments/assets/b4d78087-8587-414a-a851-77ed848f89a0)
+
+---
+
+## Tech Stack
+
+| Category | Technologies |
+|----------|--------------|
+| **Backend** | Python, Flask |
+| **Frontend** | HTML5, CSS3, Bootstrap 5, JavaScript |
+| **AI** | IBM watsonx.ai, IBM Granite Models |
+| **Deployment** | Render |
+| **Version Control** | Git & GitHub |
+
+---
+
+## Project Structure
+
+```text
+VentureArchitect-AI/
 │
-├── run.py                          # Application entry point
+├── app/
+│   ├── agents/          # AI agents and workflow
+│   ├── routes/          # Flask routes
+│   ├── services/        # IBM watsonx integration
+│   ├── static/          # CSS & JavaScript
+│   └── templates/       # HTML templates
+│
+├── run.py
 ├── requirements.txt
-├── .env                            # Credentials (never commit)
-│
-└── app/
-    ├── __init__.py                 # Flask application factory
-    ├── config.py                   # Configuration classes
-    │
-    ├── agents/
-    │   ├── __init__.py
-    │   ├── base_agent.py           # Abstract base class for all agents
-    │   ├── supervisor_agent.py     # Orchestrates the full pipeline
-    │   ├── idea_analysis_agent.py  # Agent 1: Idea refinement
-    │   ├── market_research_agent.py# Agent 2: Market research
-    │   ├── business_strategy_agent.py # Agent 3: Business model
-    │   ├── risk_analysis_agent.py  # Agent 4: Risk analysis
-    │   └── investor_pitch_agent.py # Agent 5: Investor pitch
-    │
-    ├── services/
-    │   ├── __init__.py
-    │   └── watsonx_service.py      # IBM watsonx.ai LLM client (singleton)
-    │
-    ├── routes/
-    │   ├── __init__.py
-    │   └── main.py                 # Flask routes (pages + API)
-    │
-    ├── schemas/
-    │   ├── __init__.py
-    │   └── blueprint_schema.py     # AgentResult, BlueprintContext dataclasses
-    │
-    ├── templates/
-    │   ├── base.html               # Base layout with navbar/footer
-    │   ├── index.html              # Landing page + idea input
-    │   └── blueprint.html          # Blueprint results page
-    │
-    └── static/
-        ├── css/
-        │   └── main.css            # Custom SaaS dark-mode styles
-        └── js/
-            ├── main.js             # Landing page + progress tracker
-            └── blueprint.js        # Blueprint rendering + markdown parser
-```
-
-### Agent Pipeline
-
-```
-User Idea
-    │
-    ▼
-┌─────────────────────────────────────────────────────────┐
-│                    Supervisor Agent                      │
-│  Orchestrates execution, passes context between agents  │
-└──────────┬──────────────────────────────────────────────┘
-           │
-    ┌──────▼──────┐   context   ┌───────────────┐   context
-    │  Agent 1:   │ ──────────► │   Agent 2:    │ ──────────►  ...
-    │    Idea     │             │    Market     │
-    │  Analysis   │             │   Research    │
-    └─────────────┘             └───────────────┘
-
-Each agent receives the startup idea + all prior agent outputs as context.
+├── .env
+└── README.md
 ```
 
 ---
 
-## Quick Start
+## Running Locally
 
-### Prerequisites
-
-- Python 3.10+
-- IBM Cloud account with watsonx.ai access
-- IBM Project ID and API Key
-
-### 1. Clone / Download
+Clone the repository:
 
 ```bash
-git clone <repo-url>
-cd "VentureArchitect AI"
+git clone https://github.com/KARTIK-githubs/VentureArchitect-AI.git
+cd VentureArchitect-AI
 ```
 
-### 2. Create Virtual Environment
-
-```bash
-python -m venv venv
-
-# Windows
-venv\Scripts\activate
-
-# macOS/Linux
-source venv/bin/activate
-```
-
-### 3. Install Dependencies
+Install the required packages:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Configure Environment Variables
-
-Edit the `.env` file in the project root:
+Create a `.env` file:
 
 ```env
-# IBM watsonx.ai Credentials
-IBM_API_KEY=your_actual_ibm_api_key
-IBM_PROJECT_ID=your_actual_project_id
-IBM_WATSONX_URL=https://us-south.ml.cloud.ibm.com
+IBM_API_KEY=your_api_key
+IBM_PROJECT_ID=your_project_id
+IBM_WATSONX_URL=https://au-syd.ml.cloud.ibm.com
 
-# Flask
-FLASK_SECRET_KEY=your-random-secret-key-here
-FLASK_ENV=development
-FLASK_DEBUG=True
+FLASK_SECRET_KEY=your_secret_key
 ```
 
-> ⚠️ **Never commit `.env` to version control.** It is already in `.gitignore`.
-
-### 5. Run the Application
+Start the application:
 
 ```bash
 python run.py
 ```
 
-Open [http://localhost:5000](http://localhost:5000) in your browser.
+Visit:
 
----
-
-## Configuration
-
-### Changing the AI Model
-
-In `app/config.py`:
-
-```python
-DEFAULT_MODEL_ID = "ibm/granite-3-3-8b-instruct"  # Change to any IBM Granite model
-DEFAULT_MAX_NEW_TOKENS = 1500
-DEFAULT_TEMPERATURE = 0.7
 ```
-
-### Customizing Agent Prompts
-
-Each agent has an `AGENT_INSTRUCTIONS` constant at the top of the class. Edit it to change the agent's persona and behavior:
-
-```python
-# In app/agents/idea_analysis_agent.py
-AGENT_INSTRUCTIONS = """You are an expert startup idea analyst...
-# ← Customize this to change the agent's behavior
-"""
+http://localhost:5000
 ```
 
 ---
 
-## API Reference
+## Why VentureArchitect AI?
 
-### `POST /api/generate`
+Many AI-powered startup assistants generate a single generic response.
 
-Generate a complete startup blueprint.
+VentureArchitect AI follows a **multi-agent workflow**, where specialized AI agents independently analyze different aspects of a startup idea before combining their outputs into a structured business blueprint.
 
-**Request Body:**
-```json
-{
-  "startup_idea": "Your startup idea description here..."
-}
-```
-
-**Response:**
-```json
-{
-  "success": true,
-  "blueprint": {
-    "startup_idea": "...",
-    "sections": [
-      {
-        "agent": "Idea Analysis Agent",
-        "title": "Startup Idea Analysis",
-        "content": "## Refined Concept\n...",
-        "success": true,
-        "error": null
-      }
-    ]
-  }
-}
-```
-
-### `GET /api/agents`
-
-Returns metadata about all available agents.
-
-### `GET /health`
-
-Health check endpoint.
+This approach produces more organized, transparent, and actionable results while making the reasoning process easier to follow.
 
 ---
 
-## Deployment
+## Future Improvements
 
-### Production with Gunicorn
-
-```bash
-# Set production environment
-export FLASK_ENV=production
-export FLASK_DEBUG=False
-
-# Run with Gunicorn (4 workers)
-gunicorn -w 4 -b 0.0.0.0:8000 run:app
-```
-
-### Docker
-
-```dockerfile
-FROM python:3.11-slim
-WORKDIR /app
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-COPY . .
-EXPOSE 8000
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8000", "run:app"]
-```
-
-```bash
-docker build -t venture-architect-ai .
-docker run -p 8000:8000 --env-file .env venture-architect-ai
-```
-
-### Environment Variables for Production
-
-| Variable | Description |
-|----------|-------------|
-| `IBM_API_KEY` | IBM Cloud API key |
-| `IBM_PROJECT_ID` | IBM watsonx.ai project ID |
-| `IBM_WATSONX_URL` | watsonx.ai endpoint URL |
-| `FLASK_SECRET_KEY` | Strong random secret key |
-| `FLASK_ENV` | Set to `production` |
-| `FLASK_DEBUG` | Set to `False` |
+- 📄 Export blueprints as PDF
+- 📊 AI-generated financial forecasting
+- 👥 User accounts and blueprint history
+- 🤝 Team collaboration workspace
+- 🏭 Industry-specific startup templates
+- 📑 Automatic pitch deck generation
 
 ---
 
-## Technology Stack
+## Author
 
-| Layer | Technology |
-|-------|-----------|
-| Backend | Python Flask 3.0 |
-| AI Platform | IBM watsonx.ai |
-| AI Models | IBM Granite 3.3 8B Instruct |
-| Frontend | HTML5, Bootstrap 5, Vanilla JS |
-| Styling | Custom CSS (Dark Mode SaaS) |
-| Config | python-dotenv |
-| Production | Gunicorn |
+**Kartik Aggarwal**
+
+B.Tech Information Technology  
+Maharaja Surajmal Institute of Technology (MSIT)
+
+GitHub: https://github.com/KARTIK-githubs
 
 ---
 
-## License
+## Acknowledgements
 
-MIT License — see LICENSE file.
+This project was built using:
+
+- IBM watsonx.ai
+- IBM Granite Models
+- Flask
+- Bootstrap 5
+- Render
 
 ---
 
-*Built with IBM watsonx.ai · IBM Granite Foundation Models*
+⭐ **If you found this project interesting, consider giving it a star on GitHub!**
