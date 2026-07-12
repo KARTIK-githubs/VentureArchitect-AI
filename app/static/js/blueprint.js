@@ -195,10 +195,17 @@ function renderBlueprint(payload) {
         const shortIdea = idea.length > 80 ? idea.substring(0, 80) + "..." : idea;
         title.textContent = shortIdea;
     }
-    if (subtitle) {
-        const genDate = generatedAt ? new Date(generatedAt).toLocaleString() : "Just now";
-        subtitle.textContent = `Generated ${genDate} · ${sections.length} sections · Powered by IBM Granite AI`;
-    }
+   if (subtitle) {
+    const genDate = generatedAt
+        ? new Date(generatedAt).toLocaleDateString("en-GB", {
+              day: "2-digit",
+              month: "short",
+              year: "numeric"
+          })
+        : "Today";
+
+    subtitle.textContent = `Generated on ${genDate} • ${sections.length} Expert Agents`;
+}
 
     // Update stats
     const sectionCountEl = $("#sectionCount");
