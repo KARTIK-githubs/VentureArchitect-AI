@@ -1,3 +1,5 @@
+> **Run with Groq.** Set `GROQ_API_KEY` and `FLASK_SECRET_KEY` in your hosting environment or an ignored local `.env`. `GROQ_MODEL` is optional and defaults to `llama-3.3-70b-versatile`. With a Groq key present, all five agents use Groq. The IBM setup below documents the original provider and remains available when a Groq key is absent.
+
 > **Configuration.** Use your own IBM watsonx.ai credentials and a unique Flask signing secret in a local, ignored environment file. Keep these values out of commits, deployment logs and screenshots.
 
 # VentureArchitect AI 🚀
