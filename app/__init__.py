@@ -32,17 +32,17 @@ def create_app() -> Flask:
     # Enable CORS for API routes
     CORS(app, resources={r"/api/*": {"origins": "*"}})
 
-    # Initialize IBM watsonx.ai service
+    # Initialize the configured AI provider
     try:
         from app.services.watsonx_service import init_watsonx_service
-        init_watsonx_service(
+        service = init_watsonx_service(
             api_key=cfg.IBM_API_KEY,
             project_id=cfg.IBM_PROJECT_ID,
             url=cfg.IBM_WATSONX_URL,
         )
-        logger.info("IBM watsonx.ai service initialized successfully.")
+        logger.info("AI provider ready: %s", type(service).__name__)
     except Exception as exc:
-        logger.error("Failed to initialize IBM watsonx.ai service: %s", exc)
+        logger.error("Failed to initialize AI provider: %s", exc)
         # Don't crash on startup — let requests fail with a clear error message
 
     # Register blueprints
