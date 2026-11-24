@@ -3,6 +3,9 @@ VentureArchitect AI - IBM watsonx.ai LLM Service
 Reusable client that all agents use to communicate with IBM watsonx.ai.
 """
 import logging
+import os
+
+import requests
 from ibm_watsonx_ai import APIClient, Credentials
 from ibm_watsonx_ai.foundation_models import ModelInference
 from ibm_watsonx_ai.foundation_models.schema import TextGenParameters
@@ -131,18 +134,56 @@ class WatsonXService:
             raise RuntimeError(f"LLM generation failed: {exc}") from exc
 
 
+class GroqService:
+    """Groq adapter for the existing agent generation interface."""
+
+    def __init__(self, api_key: str, model: str):
+        self.api_key = api_key
+        self.model = model
+
+    def generate(
+        self, prompt: str, model_id: str = "", max_new_tokens: int = 1500,
+        temperature: float = 0.7,
+    ) -> str:
+        try:
+            response = requests.post(
+                "https://api.groq.com/openai/v1/chat/completions",
+                headers={"Authorization": f"Bearer {self.api_key}"},
+                json={
+                    "model": self.model,
+                    "messages": [{"role": "user", "content": prompt}],
+                    "max_completion_tokens": max_new_tokens,
+                    "temperature": temperature,
+                },
+                timeout=30,
+            )
+            response.raise_for_status()
+            content = response.json()["choices"][0]["message"]["content"]
+            if not isinstance(content, str) or not content.strip():
+                raise ValueError("Empty completion")
+            return content.strip()
+        except (requests.RequestException, KeyError, IndexError, TypeError, ValueError) as exc:
+            logger.warning("Groq completion failed (%s)", type(exc).__name__)
+            raise RuntimeError("Groq could not generate a response. Try again shortly.") from None
+
+
 # Module-level singleton — initialized lazily in create_app()
-_service_instance: WatsonXService | None = None
+_service_instance: WatsonXService | GroqService | None = None
 
 
-def init_watsonx_service(api_key: str, project_id: str, url: str) -> WatsonXService:
+def init_watsonx_service(api_key: str, project_id: str, url: str) -> WatsonXService | GroqService:
     """Create and cache the singleton WatsonXService instance."""
     global _service_instance
-    _service_instance = WatsonXService(api_key=api_key, project_id=project_id, url=url)
+    groq_key = os.environ.get("GROQ_API_KEY", "").strip()
+    if groq_key:
+        model = os.environ.get("GROQ_MODEL", "").strip() or "llama-3.3-70b-versatile"
+        _service_instance = GroqService(groq_key, model)
+    else:
+        _service_instance = WatsonXService(api_key=api_key, project_id=project_id, url=url)
     return _service_instance
 
 
-def get_watsonx_service() -> WatsonXService:
+def get_watsonx_service() -> WatsonXService | GroqService:
     """Retrieve the cached WatsonXService instance."""
     if _service_instance is None:
         raise RuntimeError("WatsonXService has not been initialized. Call init_watsonx_service() first.")
