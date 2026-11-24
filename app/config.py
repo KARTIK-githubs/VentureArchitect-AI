@@ -11,7 +11,7 @@ class Config:
     """Base configuration."""
 
     # Flask
-    SECRET_KEY = os.environ.get("FLASK_SECRET_KEY", "dev-secret-key-change-in-production")
+    SECRET_KEY = os.environ.get("FLASK_SECRET_KEY")
     DEBUG = os.environ.get("FLASK_DEBUG", "False").lower() == "true"
     TESTING = False
 
