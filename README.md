@@ -1,3 +1,5 @@
+> **Configuration.** Use your own IBM watsonx.ai credentials and a unique Flask signing secret in a local, ignored environment file. Keep these values out of commits, deployment logs and screenshots.
+
 # VentureArchitect AI 🚀
 
 > **Transform your startup idea into a complete, investor-ready business blueprint using a multi-agent AI workflow.**
